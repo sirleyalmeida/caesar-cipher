@@ -1,0 +1,106 @@
+body {
+    background-color: #B0C4DE;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: normal;
+    font-family: 'Permanent Marker', cursive;
+    border: 1px solid #473C8B (211, 87, 30);
+    width: 200px center;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 10px 10px 10px 10px;
+    color: #191970;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Permanent Marker', cursive;
+    border: 1px solid #473C8B (211, 87, 30);
+    width: 200px center;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 10px 10px 10px 10px;
+    color: #191970;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.css3button {
+    text-align: center;
+    font-family: "Aleo", "serif";
+    font-size: 14px;
+    color: #000000;
+    padding: 10px 20px;
+    margin: auto;
+    width: center;
+    text-align: center;
+    background: -moz-linear-gradient( top, #836FFF 0%, #00BFFF);
+    background: -webkit-gradient( linear, left top, left bottom, from(#836FFF), to(#00BFFF));
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #0b002b;
+    -moz-box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px 2px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px 2px rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px 2px rgba(255, 255, 255, 1);
+    text-shadow: 0px -1px 0px rgba(000, 000, 000, 0.4), 0px 1px 0px rgba(255, 255, 255, 0.3);
+}
+
+.des {
+    padding: 5px 5px;
+    width: 20px;
+    margin: auto;
+}
+
+div.cipher {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    top: 140px;
+    right: 10;
+    width: 500px;
+    height: 400px;
+    text-align: center;
+}
+
+.msgIn {
+    padding: 10px 20px;
+    width: 400px;
+    margin: auto;
+}
+
+.resultDescode {
+    color: #0b002b;
+}
+
+#resultDescode {
+    color: #0b002b;
+}
+
+
+/*
+div.cipher {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    top: 140px;
+    right: 10;
+    width: 500px;
+    height: 300px;
+    border: 3px solid #6959CD;
+    text-align: center;
+}*/
