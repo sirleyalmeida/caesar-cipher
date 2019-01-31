@@ -4,6 +4,9 @@ function code(str, desloc) {
     for (let i = 0; i < str.length; i++) {
         let letter = str.charCodeAt(i);
 
+        while (desloc < 0) {
+            desloc += 26
+        }
         if (letter >= 65 && letter <= 90) {
 
             let calcDeslocMaius = ((letter - 65 + desloc) % 26) + 65
@@ -37,6 +40,9 @@ function descode(str, desloc) {
     for (let i = 0; i < str.length; i++) {
         let letter = str.charCodeAt(i);
 
+        while (desloc < 0) {
+            desloc += 26
+        }
         if (letter >= 65 && letter <= 90) {
             // let calcDeslocMaius = ((letter - 90 - desloc) % 26)
             // teste = 90 + calcDeslocMaius;
@@ -59,6 +65,7 @@ function descode(str, desloc) {
 function descipher() {
     let str = document.getElementById("msg").value;
     let desloc = document.getElementById("deslocamento").value;
+    desloc = parseInt(desloc);
     let descodif = descode(str, desloc);
     let resultDescodeFinal = document.getElementById("resultDescode").innerHTML = "A mensagem descodificada é: <br> " + descodif;
 }
