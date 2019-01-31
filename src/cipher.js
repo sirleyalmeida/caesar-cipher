@@ -1,20 +1,11 @@
 let cipher = {};
 
-function cipher() {
+let encode = () => {
     let str = document.getElementById("msg").value;
     let desloc = document.getElementById("deslocamento").value;
     desloc = parseInt(desloc);
-    let encodif = encode(str, desloc);
+    let encodif = cipher.encode(str, desloc);
     let resultCodeFinal = document.getElementById("resultCode").innerHTML = "A mensagem codificada é: <br> " + encodif;
-}
-
-
-function descipher() {
-    let str = document.getElementById("msg").value;
-    let desloc = document.getElementById("deslocamento").value;
-    desloc = parseInt(desloc);
-    let decodif = decode(str, desloc);
-    let resultDecodeFinal = document.getElementById("resultDecode").innerHTML = "A mensagem decodificada é: <br> " + decodif;
 }
 
 cipher.encode = (str, desloc) => {
@@ -45,7 +36,13 @@ cipher.encode = (str, desloc) => {
     return results.join("");
 }
 
-
+let decode = () => {
+    let str = document.getElementById("msg").value;
+    let desloc = document.getElementById("deslocamento").value;
+    desloc = parseInt(desloc);
+    let decodif = cipher.decode(str, desloc);
+    let resultDecodeFinal = document.getElementById("resultDecode").innerHTML = "A mensagem decodificada é: <br> " + decodif;
+}
 
 cipher.decode = (str, desloc) => {
     let results = [];

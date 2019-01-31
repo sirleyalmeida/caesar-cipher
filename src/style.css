@@ -55,9 +55,9 @@ p {
 }
 
 .des {
-    padding: 5px 5px;
-    width: 20px;
-    margin: auto;
+    padding: 3px 5px;
+    width: 50px;
+    font-size: 15px;
 }
 
 div.button {
