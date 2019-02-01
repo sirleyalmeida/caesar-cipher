@@ -1,14 +1,12 @@
-let cipher = {};
-
-let encode = () => {
+function cipher() {
     let string = document.getElementById("msg").value;
     let offset = document.getElementById("deslocamento").value;
     offset = parseInt(offset);
-    let encodif = cipher.encode(string, offset);
+    let encodif = encode(string, offset);
     let resultCodeFinal = document.getElementById("resultCode").innerHTML = "A mensagem codificada é: <br> " + encodif;
 }
 
-cipher.encode = (string, offset) => {
+function encode(string, offset) {
     let results = [];
 
     if (offset % 26 === 0) {
@@ -39,15 +37,15 @@ cipher.encode = (string, offset) => {
     return results.join("");
 }
 
-let decode = () => {
+function decipher() {
     let string = document.getElementById("msg").value;
     let offset = document.getElementById("deslocamento").value;
     offset = parseInt(offset);
-    let decodif = cipher.decode(string, offset);
+    let decodif = decode(string, offset);
     let resultDecodeFinal = document.getElementById("resultDecode").innerHTML = "A mensagem decodificada é: <br> " + decodif;
 }
 
-cipher.decode = (string, offset) => {
+function decode(string, offset) {
     let results = [];
 
     if (offset % 26 === 0) {
