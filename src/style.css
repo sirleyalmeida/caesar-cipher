@@ -8,19 +8,7 @@ body {
     margin: auto;
 }
 
-h1 {
-    font-size: 40px;
-    font-weight: normal;
-    font-family: 'Permanent Marker', cursive;
-    border: 1px solid #473C8B (211, 87, 30);
-    width: 200px center;
-    text-align: center;
-    letter-spacing: 1px;
-    padding: 10px 10px 10px 10px;
-    color: #191970;
-    margin: auto;
-}
-
+h1,
 h2 {
     font-size: 20px;
     font-weight: normal;
@@ -54,7 +42,11 @@ p {
     text-shadow: 0px -1px 0px rgba(000, 000, 000, 0.4), 0px 1px 0px rgba(255, 255, 255, 0.3);
 }
 
-.des {
+#style-title {
+    font-size: 40px;
+}
+
+#deslocamento {
     padding: 3px 5px;
     width: 50px;
     font-size: 15px;
@@ -65,16 +57,16 @@ div.button {
     width: 100vw;
 }
 
-.msgIn {
+#msg {
     padding: 10px 20px;
     width: 50vw;
     margin: auto;
 }
 
-.resultDescode {
-    color: #0b002b;
+#resultCode {
+    color: #c71585;
 }
 
-#resultDescode {
-    color: #0b002b;
+#resultDecode {
+    color: #4B0082;
 }

@@ -1,32 +1,35 @@
 let cipher = {};
 
 let encode = () => {
-    let str = document.getElementById("msg").value;
-    let desloc = document.getElementById("deslocamento").value;
-    desloc = parseInt(desloc);
-    let encodif = cipher.encode(str, desloc);
+    let string = document.getElementById("msg").value;
+    let offset = document.getElementById("deslocamento").value;
+    offset = parseInt(offset);
+    let encodif = cipher.encode(string, offset);
     let resultCodeFinal = document.getElementById("resultCode").innerHTML = "A mensagem codificada é: <br> " + encodif;
 }
 
-cipher.encode = (str, desloc) => {
+cipher.encode = (string, offset) => {
     let results = [];
 
-    for (let i = 0; i < str.length; i++) {
-        let letter = str.charCodeAt(i);
+    if (offset % 26 === 0) {
+        alert("Números múltiplos de 26 não codificam, pois o alfabeto possui 26 letras");
+    }
 
-        while (desloc < 0) {
-            desloc += 26
+    for (let i in string) {
+        let letter = string.charCodeAt(i);
+
+        while (offset < 0) {
+            offset += 26
         }
         if (letter >= 65 && letter <= 90) {
-
-            let calcDeslocMaius = ((letter - 65 + desloc) % 26) + 65
-            let deslocFinal = String.fromCharCode(calcDeslocMaius);
-            results.push(deslocFinal);
+            let calcOffsetUpper = ((letter - 65 + offset) % 26) + 65
+            let offsetFinal = String.fromCharCode(calcOffsetUpper);
+            results.push(offsetFinal);
 
         } else if (letter >= 97 && letter <= 122) {
-            let calcDeslocMinus = ((letter - 97 + desloc) % 26) + 97;
-            let deslocFinal = String.fromCharCode(calcDeslocMinus);
-            results.push(deslocFinal);
+            let calcOffsetLower = ((letter - 97 + offset) % 26) + 97;
+            let offsetFinal = String.fromCharCode(calcOffsetLower);
+            results.push(offsetFinal);
 
         } else {
             let othersLetters = String.fromCharCode(letter);
@@ -37,32 +40,35 @@ cipher.encode = (str, desloc) => {
 }
 
 let decode = () => {
-    let str = document.getElementById("msg").value;
-    let desloc = document.getElementById("deslocamento").value;
-    desloc = parseInt(desloc);
-    let decodif = cipher.decode(str, desloc);
+    let string = document.getElementById("msg").value;
+    let offset = document.getElementById("deslocamento").value;
+    offset = parseInt(offset);
+    let decodif = cipher.decode(string, offset);
     let resultDecodeFinal = document.getElementById("resultDecode").innerHTML = "A mensagem decodificada é: <br> " + decodif;
 }
 
-cipher.decode = (str, desloc) => {
+cipher.decode = (string, offset) => {
     let results = [];
 
-    for (let i = 0; i < str.length; i++) {
-        let letter = str.charCodeAt(i);
+    if (offset % 26 === 0) {
+        alert("Números múltiplos de 26 não decodificam, pois o alfabeto possui 26 letras");
+    }
 
-        while (desloc < 0) {
-            desloc += 26
+    for (let i in string) {
+        let letter = string.charCodeAt(i);
+
+        while (offset < 0) {
+            offset += 26
         }
         if (letter >= 65 && letter <= 90) {
-
-            let calcDeslocMaius = ((letter - 65 - (desloc % 26)) + 26) % 26 + 65
-            let deslocFinal = String.fromCharCode(calcDeslocMaius);
-            results.push(deslocFinal)
+            let calcOffsetUpper = ((letter - 65 - (offset % 26)) + 26) % 26 + 65
+            let offsetFinal = String.fromCharCode(calcOffsetUpper);
+            results.push(offsetFinal)
 
         } else if (letter >= 97 && letter <= 122) {
-            let calcDeslocMinus = ((letter - 97 - (desloc % 26)) + 26) % 26 + 97
-            let deslocFinal = String.fromCharCode(calcDeslocMinus);
-            results.push(deslocFinal);
+            let calcOffsetLower = ((letter - 97 - (offset % 26)) + 26) % 26 + 97
+            let ffsetFinal = String.fromCharCode(calcOffsetLower);
+            results.push(ffsetFinal);
 
         } else {
             let othersLetters = String.fromCharCode(letter);

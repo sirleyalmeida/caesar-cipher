@@ -9,23 +9,20 @@
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
     <body>
-        <div id="root"></div>
         <script src="cipher.js"></script>
         <script src="tests.js"></script>
 
-        <div class="relative">
-            <h1>Caesar Cipher</h1>
-        </div>
+        <h1 id="style-title">Caesar Cipher</h1>
 
         <h2>Em criptografia, a <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank">Cifra de César</a>, também conhecida como cifra de troca, código de César ou troca de César, é uma das mais simples e conhecidas técnicas de criptografia.
             É um tipo de cifra de substituição na qual cada letra do texto é substituída por outra, que se apresenta no alfabeto abaixo dela um número fixo de vezes.</h2>
 
         <p>Insira a mensagem</p>
-        <input type="text" id="msg" class="msgIn">
+        <input type="text" id="msg">
         <br>
         <br>
         <p>Insira o deslocamento</p>
-        <input type="number" id="deslocamento" class="des">
+        <input type="number" id="deslocamento">
         <br>
         <br>
         <div class="button">
@@ -34,10 +31,10 @@
         </div>
         <br>
         <p id="resultCode"></p>
+        <br>
         <p id="resultDecode"></p>
         <br>
         <br>
-
     </body>
 
 </html>
