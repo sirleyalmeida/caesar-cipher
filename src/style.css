@@ -1,72 +1,117 @@
 body {
-    background-color: #B0C4DE;
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-align: center;
-    margin: auto;
+  background-color: #000033;
+  font-family: 'Noto Sans', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0;
+  color: #e0ebeb;
 }
 
-h1,
-h2 {
-    font-size: 20px;
-    font-weight: normal;
-    font-family: 'Permanent Marker', cursive;
-    border: 1px solid #473C8B (211, 87, 30);
-    width: 200px center;
-    text-align: center;
-    letter-spacing: 1px;
-    padding: 10px 10px 10px 10px;
-    color: #191970;
-    margin: auto;
+.style-title {
+  font-size: 30px;
+  text-align: center;
+} 
+
+.container-body {
+  height: 90%;
+  width: 60%;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  background-color: #b3d9ff;
+  border-radius: 10px;
+  border: 1px solid #0b002b;
+  padding: 10px;
+  margin: 0 10% 0 20%;
 }
 
-p {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 1px;
-    margin: auto;
+.text-container {
+  margin: auto;
+  text-align: center;
+  color: #003366;
+  font-size: 12px;
 }
 
-.css3button {
-    font-family: "Aleo", "serif";
-    font-size: 14px;
-    color: #000000;
-    padding: 10px 20px;
-    background: -webkit-gradient( linear, left top, left bottom, from(#836FFF), to(#00BFFF));
-    border-radius: 10px;
-    border: 1px solid #0b002b;
-    box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px 2px rgba(255, 255, 255, 1);
-    text-shadow: 0px -1px 0px rgba(000, 000, 000, 0.4), 0px 1px 0px rgba(255, 255, 255, 0.3);
+.cipher-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #003366;
 }
 
-#style-title {
-    font-size: 40px;
+.msg-offset {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: auto; 
 }
 
-#deslocamento {
-    padding: 3px 5px;
-    width: 50px;
-    font-size: 15px;
+textarea {
+  border-radius: 5px;
+  resize: none;
+  background-color: #e6f2ff;
+  width: 30vw;
+  height: 10vh;
+  font-size: 15px;
 }
 
-div.button {
-    top: 140px;
-    width: 100vw;
+.offset {
+  border-radius: 5px;
+  background-color: #e6f2ff;
+  width: 8vw;
+  height: 3vh;
+  font-size: 15px;
 }
 
-#msg {
-    padding: 10px 20px;
-    width: 50vw;
-    margin: auto;
+.buttons {
+  height: auto;
+  display: inline-flex;
+  padding: 20px;
 }
 
-#resultCode {
-    color: #c71585;
+.button {
+  text-align: center;
+  margin: 5px;;
+  font-family: "Aleo", "serif";
+  font-weight: bold;
+  font-size: 14px;
+  color: #0b002b;
+  padding: 10px 20px;
+  background: -webkit-gradient( linear, left top, left bottom, from(#836FFF), to(#00BFFF));
+  border-radius: 10px;
+  border: 1px solid #0b002b;
+  box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px 2px rgba(255, 255, 255, 1);
+  text-shadow: 0px -1px 0px rgba(000, 000, 000, 0.4), 0px 1px 0px rgba(255, 255, 255, 0.3);
 }
 
-#resultDecode {
-    color: #4B0082;
+.results {
+  margin: 0;
+  display: inline-flex;
+  justify-content: space-evenly;
+  padding: 2px;
 }
+
+.div-code {
+  width: 80%;
+  color: #000033;
+  border-radius: 10px;
+  border: 1px solid #000033;
+  margin: 2px;
+}
+
+.div-decode {
+  width: 80%;
+  color: #000000;
+  border-radius: 10px;
+  border: 1px solid #000033;
+  margin: 2px;
+}
+
+.result-code {
+  color: #000033;
+}
+
+.result-decode {
+  color: #000000;
+} 

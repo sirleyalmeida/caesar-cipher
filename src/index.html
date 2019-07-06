@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
+<title>Caesar Cipher</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
-<head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+<body>
+	<h1 class="style-title">Caesar Cipher</h1>
+	<section class="container-body">
+		<div class="text-container">
+			<h2>Em criptografia, a <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank">Cifra de
+					César</a>, é uma das mais simples e conhecidas técnicas de criptografia. É um tipo de cifra de
+				substituição na qual cada letra do texto é substituída por outra, que se apresenta no alfabeto abaixo
+				dela um número fixo de vezes.</h2>
+		</div>
+		<div class="results">
+			<div class="div-code">
+				<p>mensagem codificada:</p>
+				<p class="result-code" id="resultCode"></p>
+			</div>
+			<div class="div-decode">
+				<p>mensagem decodificada:</p>
+				<p class="result-decode" id="resultDecode"></p>
+			</div>
+		</div>
+		<div class="cipher-container">
+			<div class="msg-offset">
+				<p>Insira a mensagem</p>
+				<textarea type="text" id="msg"></textarea>
+				<p>Insira o deslocamento</p>
+				<input type="number" id="offset" class="offset"></input>
+			</div>
+			<div class="buttons">
+				<button onclick="cipher()" class="button">Codificar</button>
+				<button onclick="decipher()" class="button">Decodificar</button>
+			</div>
+		</div>
 
-    <body>
-        <script src="cipher.js"></script>
-        <script src="tests.js"></script>
-
-        <h1 id="style-title">Caesar Cipher</h1>
-
-        <h2>Em criptografia, a <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank">Cifra de César</a>, também conhecida como cifra de troca, código de César ou troca de César, é uma das mais simples e conhecidas técnicas de criptografia.
-            É um tipo de cifra de substituição na qual cada letra do texto é substituída por outra, que se apresenta no alfabeto abaixo dela um número fixo de vezes.</h2>
-
-        <p>Insira a mensagem</p>
-        <input type="text" id="msg">
-        <br>
-        <br>
-        <p>Insira o deslocamento</p>
-        <input type="number" id="deslocamento">
-        <br>
-        <br>
-        <div class="button">
-            <button onclick="cipher()" class="css3button">Codificar</button>
-            <button onclick="decipher()" class="css3button">Descodificar</button>
-        </div>
-        <br>
-        <p id="resultCode"></p>
-        <br>
-        <p id="resultDecode"></p>
-        <br>
-        <br>
-    </body>
+	</section>
+	<script src="cipher.js"></script>
+	<script src="tests.js"></script>
+</body>
 
 </html>
